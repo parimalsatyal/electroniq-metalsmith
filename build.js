@@ -29,8 +29,9 @@ metalsmith(__dirname)
 		pattern: ':title'
 	}))
 	.use(layouts({
-		engine: 'handlebars',
 		directory: './layouts',
+        	default: 'article.html',
+        	suppressNoFilesError: true,
 		default: 'article.html',
 		pattern: ["*/*/*html","*/*html","*html"],
 	  partials: {
